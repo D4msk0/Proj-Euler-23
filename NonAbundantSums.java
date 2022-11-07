@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * A perfect number is a number for which the sum of its proper divisors is exactly equal to the number. 
  * For example, the sum of the proper divisors of 28 would be 1 + 2 + 4 + 7 + 14 = 28, 
@@ -18,7 +20,10 @@
  */
 
 public class NonAbundantSums {
+
+   
     public static void main(String[] args) {
+        ArrayList<Integer> abundantList = new ArrayList<>();
         
         for (int n = 1; n <= 100; n++) {
            
@@ -31,8 +36,10 @@ public class NonAbundantSums {
             }
 
             if (sum > n) {
-                System.out.println(n + " Abundant " + sum + "***");
+                abundantList.add((Integer)n);
             }
+            
         }
+        System.out.println(abundantList.get(5));
     }
 }
